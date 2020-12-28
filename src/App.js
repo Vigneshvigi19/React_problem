@@ -1,24 +1,34 @@
 import React from 'react';
+import Add from './add_del';
+import Alter from './Add';
 
-const App = (props) =>{
-  console.log('hey', props)
-  const arr=props;
-  const arr1= arr.map(ninja =>{
+
+class App extends React.Component{
+ // console.log('hey', props)
+ state={
+  one:[
+      {name:"Vignesh", age:11, weight:81, id:1},
+      {name:"Gill", age:20, weight:74, id:2},
+      {name:'Mahima', age:31, weight:53, id:3}
+    ]
+}
+  addIt = (data)=>{
+    data.id = Math.random();
+      let temp=[...this.state.one, data];
+      this.setState({
+        one:temp
+      })
+    }
+
+
+  render(){
     return (
       <div>
-        <div>name:{ninja.name}</div>
-        <div>Age: {ninja.age} </div>
+        <Add vignesh={this.state.one}/>
+        <Alter addIt={this.addIt}/>
       </div>
     )
-  })
-    return (
-      <div className="ninja">
-        
-      <div>arr1</div>
-     
-    </div> 
-    );
-  
+  }
   
     
 };
