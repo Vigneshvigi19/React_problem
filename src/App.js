@@ -6,15 +6,15 @@ const App = (props) =>{
   const arr1= arr.map(ninja =>{
     return (
       <div>
-        name:
-  
+        <div>name:{ninja.name}</div>
+        <div>Age: {ninja.age} </div>
       </div>
     )
   })
     return (
       <div className="ninja">
         
-      <div>name:{this.props.name}</div>
+      <div>arr1</div>
      
     </div> 
     );
