@@ -3,8 +3,8 @@ import React from 'react';
 class Alter extends React.Component{
     state={
         name:null,
-        age:null,
-        weight:null,
+        number:null,
+        relation:null,
         id:null
     }
 
@@ -18,7 +18,7 @@ class Alter extends React.Component{
             e.preventDefault();
             document.getElementById("form1").reset();
             this.props.addIt(this.state);
-            
+
     }
     
     render(){
@@ -27,9 +27,9 @@ class Alter extends React.Component{
                 <form onSubmit={this.handleSubmit} id='form1'>
                     <label >Name:</label>
                     <input type='text' id='name' onChange={this.handleChange}/>
-                    <label >Age:</label>
+                    <label >Number:</label>
                     <input type='text' id='age' onChange={this.handleChange}/>
-                    <label >Weight:</label>
+                    <label >Relation:</label>
                     <input type='text' id='weight' onChange={this.handleChange}/>
                     <button>Submit</button>
                 </form>

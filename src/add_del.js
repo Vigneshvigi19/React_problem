@@ -4,10 +4,11 @@ const Add = ({vignesh,delIt}) =>{
   const arr1 = vignesh.map((ninja,index) =>{   
     return(
       <div key={index}>
-        <div>name:{ninja.name}</div>
-        <div>Age: {ninja.age} </div>
-        <div>Weight: {ninja.weight}</div>
+        <div>Name:{ninja.name}</div>
+        <div>Number: {ninja.number} </div>
+        <div>Relation: {ninja.relation}</div>
         <button onClick={()=>{delIt(ninja.id)}}>Delete</button>
+        <p></p>
       </div>
     )
      })

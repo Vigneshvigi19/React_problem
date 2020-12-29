@@ -7,8 +7,8 @@ class App extends React.Component{
  
  state={
   one:[
-      {name:"Vignesh", age:21, weight:81, id:1},
-      {name:'Mahi', age:21, weight:53, id:3}
+      {name:"Vignesh", number:6361179266, relation:'Friend', id:1},
+      {name:'Mahi', number:9448050983, relation:'Friend', id:3}
     ]
 }
   addIt = (data)=>{
@@ -33,6 +33,7 @@ class App extends React.Component{
     return (
       <div>
         <Alter addIt={this.addIt}/>
+        <div><p></p> </div>
         <Add vignesh={this.state.one} delIt={this.delIt}/>
         
       </div>
