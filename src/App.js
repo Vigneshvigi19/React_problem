@@ -4,12 +4,11 @@ import Alter from './Add';
 
 
 class App extends React.Component{
- // console.log('hey', props)
+ 
  state={
   one:[
-      {name:"Vignesh", age:11, weight:81, id:1},
-      {name:"Gill", age:20, weight:74, id:2},
-      {name:'Mahima', age:31, weight:53, id:3}
+      {name:"Vignesh", age:21, weight:81, id:1},
+      {name:'Mahi', age:21, weight:53, id:3}
     ]
 }
   addIt = (data)=>{
@@ -20,12 +19,22 @@ class App extends React.Component{
       })
     }
 
+    delIt = (id)=>{
+      
+        let temp=this.state.one.filter(abc=>{
+          return id!==abc.id
+        })
 
+        this.setState({
+          one:temp
+        })
+    }
   render(){
     return (
       <div>
-        <Add vignesh={this.state.one}/>
         <Alter addIt={this.addIt}/>
+        <Add vignesh={this.state.one} delIt={this.delIt}/>
+        
       </div>
     )
   }
