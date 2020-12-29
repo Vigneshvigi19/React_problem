@@ -27,11 +27,11 @@ class Alter extends React.Component{
                 <form onSubmit={this.handleSubmit} id='form1'>
                     <label >Name:</label>
                     <input type='text' id='name' onChange={this.handleChange}/>
-                    <label >Number:</label>
-                    <input type='text' id='age' onChange={this.handleChange}/>
+                    <label >Phone Number:</label>
+                    <input type='text' id='number' onChange={this.handleChange}/>
                     <label >Relation:</label>
-                    <input type='text' id='weight' onChange={this.handleChange}/>
-                    <button>Submit</button>
+                    <input type='text' id='relation' onChange={this.handleChange}/>
+                    <button>Add Contact</button>
                 </form>
             </div>
         )
